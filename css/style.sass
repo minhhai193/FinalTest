@@ -1,0 +1,732 @@
+$font-family: "Montserrat", sans-serif
+$font-title: "Baloo Bhai 2", cursive
+$lato: "Lato", sans-serif
+$color: #6c9894
+*
+  box-sizing: border-box
+
+html,
+body
+  font: 14px $font-family
+  margin: 0
+  padding: 0
+  color: #727272
+
+.wrapper-common
+  width: 100%
+  max-width: 1440px
+  margin: 0 auto
+  position: relative
+
+a
+  text-decoration: none
+
+li
+  list-style-type: none
+
+.header-wrapper
+  width: 100%
+  max-width: 1440px
+  margin: 0 auto
+  position: relative
+
+.main-title
+  margin: 0
+  max-height: 4.7em
+
+.logo
+  width: 3.9em
+
+.header-toolbar
+  position: absolute
+  width: 100%
+  top: 0
+  display: flex
+  z-index: 1
+
+.header-logo
+  padding-left: 2%
+
+.header-menu
+  width: 100%
+  display: flex
+  align-items: center
+
+.header-menu-list
+  display: flex
+  justify-content: flex-end
+  background: #e2ede8
+  width: 100%
+  padding: 0.5em 2.7em 0.5em 0
+  .list-item
+    padding: 0 1.9em
+    list-style-type: none
+    .active
+      background: #c7d9d5
+    a
+      padding: 0.37em 1.3em
+      font: bold 1.42em $font-title
+      color: #494f4e
+      letter-spacing: 0.4px
+    a:hover
+      background: #c7d9d5
+
+.open-menu
+  display: none
+
+.open-button
+  position: relative
+  height: 20px
+  width: 28px
+  .line-top
+    height: 3px
+    width: 25px
+    background-color: #494f4e
+    position: absolute
+    top: 0px
+  .line-mid
+    height: 3px
+    width: 25px
+    background-color: #494f4e
+    position: absolute
+    top: 8px
+  .line-bot
+    height: 3px
+    width: 25px
+    background-color: #494f4e
+    position: absolute
+    bottom: 0px
+
+.close-menu
+  display: none
+
+.close-button
+  font: bold 3em $font-title
+  display: none
+  color: #494f4e
+  padding-right: .2em
+
+.menu-mobile
+  display: none
+
+.menu-mobile-list
+  position: fixed
+  top: 8.4em
+  right: 0
+  width: 100%
+  height: 0
+  background: #6c9894cc
+  z-index: 2
+  overflow: hidden
+  transition: .5s
+  padding: 0 3%
+  li
+    padding: 1em 0
+    border-bottom: 1px solid #fff
+    a
+      font: 1.5em $font-title
+      color: #fff
+
+.section-slider
+  background: url("../image/slide_background.png") no-repeat bottom
+  background-size: cover
+
+.slider-row
+  display: grid
+  grid-template-columns: 51.2% 49.8%
+  padding: 117px 6% 15em
+
+.slider-image
+  width: 100%
+
+.slider-content
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  text-align: center
+  padding-left: 1.3em
+
+.slider-title
+  font: bold 7em $font-title
+  color: #6c9894
+  margin: 0.9em 0 0.1em
+  line-height: 1em
+  letter-spacing: 3px
+
+.slider-text
+  font: 1.47em $font-family
+  color: #6c9894
+  margin-top: 0px
+  line-height: 1.3em
+  padding: 0em 6% 0
+
+.slider-button
+  margin-left: 4em
+  padding: 0.2em 0
+  background: #6c9894
+  border-radius: 8px
+  position: relative
+  overflow: hidden
+  a
+    color: #fff
+    letter-spacing: 4px
+    position: relative
+    font: 1.23em $lato
+    padding: 0.2em 1.5em
+    transition: color 0.6s cubic-bezier(0.53, 0.21, 0, 1)
+  &::before
+    content: ""
+    position: absolute
+    top: 50%
+    left: 0
+    border-radius: 8px
+    transform: translate(-100%, -50%)
+    width: 100%
+    height: 100%
+    background: #fff
+    transition: transform 0.6s cubic-bezier(0.53, 0.21, 0, 1)
+  &:hover
+    a
+      color: $color
+    &:before
+      transform: translate(0, -50%)
+
+.section-class
+  background: url("../image/class_background.png") no-repeat top
+  background-size: cover
+  text-align: center
+  padding: 8.5em 0 7.8em
+
+.class-title
+  color: #fff
+  font: bold 5.35em $font-title
+  margin: 0
+  line-height: 1em
+
+.class-text
+  font: 2.14em $font-family
+  color: #fff
+  margin: 0.4em 0 0
+  padding: 0.8em 20%
+
+.class-list
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  padding: 0 8%
+  grid-gap: 15px
+
+.class-list-image
+  background: url(../image/class_shape.png) no-repeat center
+  background-size: contain
+  padding: 3em
+
+.class-image
+  width: 100%
+
+.class-sub-title
+  color: #fff
+  font: bold 2.63em $font-title
+  margin: 0 0 0.3em
+  line-height: 1.3em
+
+.class-sub-text
+  color: #fff
+  font: 1.58em $font-title
+  margin: 0
+  line-height: 1.25em
+
+.section-our-stats
+  background: url("../image/ourstats_shape.png") no-repeat
+  background-size: cover
+  text-align: center
+  padding: 5.8em 0 14em
+
+.our-stats-background
+  background: url("../image/ourstats_background.png") no-repeat center
+  background-size: cover
+
+.our-stats-title
+  margin: 0
+  font: bold 5.35em $font-title
+  color: $color
+  line-height: 1.3em
+
+.our-stats-text
+  margin: 0
+  font: 2.12em $font-title
+  color: $color
+  padding: 26px 27%
+  line-height: 1.2em
+
+.our-stats-list
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  margin-top: 7em
+  padding: 0 2%
+  grid-gap: 40px
+  li
+    background: url("../image/ourstats_border.png") no-repeat center
+    background-size: contain
+    padding: 21%
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
+    height: 100%
+
+.stats-item-title
+  font: bold 4.77em $font-title
+  color: $color
+  margin: 0
+  line-height: 1em
+
+.stats-item-text
+  font: 1.7em $font-family
+  color: #6c9894
+  letter-spacing: -1px
+  margin: 0.4em 0
+
+.section-instructors
+  background: $color
+
+.instructors-row
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-gap: 40px
+
+.instructors-content
+  padding: 36% 0 0 13%
+
+.instructors-title
+  font: bold 5.35em $font-title
+  color: #fff
+  line-height: 1.2em
+  margin: 0
+
+.instructors-text
+  font: 2.12em $font-title
+  color: #fff
+  margin: 5px 0 0
+  line-height: 1.23em
+
+.instructors-button
+  margin-top: 4.3em
+  a
+    padding: 0.5em 3.8em
+    background: #fff
+    color: $color
+    font: bold 1.78em $font-title
+
+  a:hover
+    background: #e2ede8
+
+.instructors-image
+  width: 100%
+
+.section-experience
+  background: url("../image/experience_background.png") no-repeat center
+  background-size: cover
+
+.experience-row
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-gap: 40px
+
+.experience-image
+  padding: 16% 6% 10% 11%
+  width: 100%
+
+.experience-content
+  padding: 30% 0 0 12%
+
+.experience-title
+  font: bold 5.35em $font-title
+  color: $color
+  padding-right: 6%
+  line-height: 1.25em
+  margin-bottom: 0
+
+.experience-text
+  font: 2.12em $font-family
+  color: $color
+  line-height: 1.2em
+  margin-top: 0.8em
+
+.experience-button
+  margin: 5.4em 0
+  a
+    background: $color
+    color: #fff
+    font: bold 1.5em $font-family
+    padding: 0.85em 4.5em
+  a:hover
+    background: #e2ede8
+    color: $color
+
+.section-pricing
+  background: $color
+
+.section-pricing
+  padding: 3.5em 0 4em
+  text-align: center
+
+.pricing-title
+  font: bold 5.35em $font-title
+  color: #fff
+  line-height: 1.25em
+  margin-bottom: 0
+
+.pricing-text
+  font: 2.12em $font-family
+  color: #fff
+  line-height: 1.2em
+  margin-top: 0.8em
+  padding: 0 23%
+
+.pricing-list
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  grid-gap: 6%
+  padding: 1.5em 7%
+  li
+    background: #fff
+    border-radius: 8px
+    padding: 2.5em 5%
+
+.pricing-sub-title
+  font: bold 2.63em $font-title
+  color: $color
+  line-height: 1em
+  margin: 0 0 0.2em
+  padding-bottom: 0.2em
+
+.pricing-item-text
+  font: 1.58em $font-family
+  color: $color
+  line-height: 1.1em
+  margin: 2.2em 0 0.2em
+  padding-bottom: 0.2em
+
+.pricing-item-button
+  margin-top: 2em
+  a
+    display: block
+    background: $color
+    color: #fff
+    font: bold 1.58em $font-family
+    border-radius: 5px
+    padding: 0.8em 0
+  a:hover
+    background: #e2ede8
+    color: $color
+
+.section-members
+  background: url("../image/members_background.png") no-repeat center
+  background-size: cover
+  text-align: center
+  padding: 4em 0 12em
+
+.members-slide
+  padding: 0
+
+.slide-item-box
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+.slide-item-image
+  background: url("../image/members_shape.png") no-repeat center
+  background-size: contain
+  padding: 3em
+
+.members-image
+  width: 100%
+
+.members-title
+  font: bold 4.16em $font-title
+  color: $color
+  line-height: 1em
+  margin: 0.45em 0 0
+
+.members-text
+  font: 4.16em $font-family
+  color: $color
+  line-height: 1.2em
+  margin: 0
+  padding: 0.25em 8%
+
+.section-subscribe
+  background: $color
+  text-align: center
+  padding: 9em 0 15.5em
+
+.subscribe-row
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.subscribe-title
+  font: bold 5.35em $font-title
+  color: #fff
+  line-height: 1em
+  margin: 0
+
+.subscribe-form
+  display: flex
+  position: relative
+
+.subscribe-text
+  font: 2.12em $font-family
+  color: #fff
+  line-height: 1.2em
+  margin: 0
+  padding: 1.25em 23% 0.5em
+
+.subscribe-input
+  font: 1.6em $font-family
+  padding: 0.8em 1.5em
+  color: #bdcfcd
+  border-radius: 40px 0px 0px 40px
+  border: none
+  width: 25em
+  outline: 0
+  margin-right: 7em
+
+.subscribe-submit
+  font: bold 1.6em $font-family
+  padding: 0.8em 2.4em
+  color: $color
+  border-radius: 40px
+  border: none
+  position: absolute
+  background: #f4f9f4
+  top: 0
+  right: -43px
+  letter-spacing: 1px
+  outline: 0
+  cursor: pointer
+
+.subscribe-submit:hover
+  background: #97c4c0
+  color: #fff
+
+.footer
+  background: #f4f9f4
+  padding: 11em 0
+
+.footer-row
+  display: grid
+  grid-template-columns: 2fr 0.8fr 0.8fr 0.8fr
+  grid-gap: 3%
+
+.footer-content
+  padding: 0 9.5%
+
+.footer-item-title
+  font: bold 2.38em $font-title
+  color: $color
+  line-height: 1em
+  margin: 0 0 0.9em
+
+.footer-item-text
+  font: 1.78em $font-family
+  color: $color
+  line-height: 1.2em
+  margin: 0
+
+.footer-list
+  padding: 0
+  li
+    padding-bottom: 1em
+    a
+      font: 1.78em $font-family
+      color: $color
+      transition: 0.5s
+    a:hover
+      color: #97c4c0
+
+.footer-list-social
+  padding: 0 1em 0 0
+  li
+    padding-bottom: 1em
+    a
+      font: 1.78em $font-family
+      color: $color
+      transition: 0.5s
+      display: flex
+      align-items: center
+    a:hover
+      color: #97c4c0
+    .social-icon
+      padding-right: 1.1em
+
+// Tablet
+@media screen and (max-width: 1023px)
+  html,
+  body
+    font-size: 13px
+
+  .wrapper-common
+    width: 90%
+
+  .header-menu-list
+    .list-item
+      display: none
+
+  .header-toolbar
+    position: fixed
+
+  .open-menu
+    display: flex
+    padding: 0 0.5em
+    align-items: center
+
+  .close-menu
+    display: flex
+    align-items: center
+
+  .menu-mobile
+    display: block
+
+  .header-logo
+    padding: 0
+
+  .header-menu-list
+    height: 100%
+
+  .section-slider
+    padding-top: 5em
+
+  .slider-row
+    grid-template-columns: 55% 45%
+    padding-left: 0
+    padding-right: 0
+
+  .slider-title
+    margin: 0
+
+  .class-text
+    padding: 0 0 2em
+
+  .class-list
+    padding: 0
+
+  .our-stats-text
+    padding: 0
+
+  .our-stats-list
+    grid-template-columns: 1fr
+
+  .instructors-row
+    display: block
+
+  .instructors-content
+    padding: 5em 0
+
+  .experience-row
+    display: block
+
+  .experience-image
+    padding: 0
+    margin-top: 5em
+
+  .experience-content
+    padding: 0 0 1em
+
+  .experience-text
+    margin: 0
+
+  .pricing-list
+    padding: 0
+
+  .pricing-text
+    padding: 0
+
+  .members-text
+    padding: 0
+    font-size: 2.5em
+
+  .subscribe-text
+    padding: 0.5em 0
+
+  .subscribe-input
+    width: 20em
+
+  .footer-row
+    grid-template-columns: 2fr 1fr
+
+  .footer-content
+    padding: 0
+
+// SP
+@media screen and (max-width: 767px)
+  html,
+  body
+    font-size: 12px
+
+  .slider-row
+    grid-template-columns: 1fr
+    grid-gap: 2em
+    padding-bottom: 10em
+
+  .slider-content,
+  .slider-text
+    padding: 0
+
+  .slider-button
+    margin: 0
+
+  .class-list
+    grid-template-columns: 1fr
+    grid-gap: 4em
+
+  .class-image
+    width: 60%
+
+  .instructors-title
+    font-size: 4.3em
+
+  .instructors-text
+    font-size: 1.8em
+
+  .experience-title
+    font-size: 4.3em
+
+  .experience-text
+    font-size: 1.8em
+
+  .pricing-list
+    display: block
+    li
+      margin: 3em 0
+
+  .members-text
+    font-size: 1.5em
+
+  .members-title
+    font-size: 2.5em
+
+  .subscribe-form
+    display: block
+
+  .subscribe-input
+    margin: 0
+    width: 100%
+    border-radius: 40px
+
+  .subscribe-submit
+    position: static
+    margin-top: 1em
+    width: 100%
+    border-radius: 40px
+
+  .subscribe-text
+    font-size: 1.7em
+
+  .footer
+    padding: 9em 0
+
+  .footer-row
+    grid-template-columns: 1fr
